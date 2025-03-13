@@ -850,107 +850,108 @@ nav {
     background-color: #111;
     padding: 40px 0;
     text-align: left;
+    /* Ocupa todo el ancho */
     width: 100%;
-}
-
-.containerf {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Se quita el max-width para que ocupe todo el ancho */
+  .containerf {
+    width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-}
-
-.footer-izquierda {
+    padding: 0 30px;
+    /* Si deseas un padding lateral */
+    box-sizing: border-box;
+  }
+  
+  .footer-izquierda {
     flex: 1;
-    max-width: 300px;
-}
-
-.footer-izquierda .logo {
+    min-width: 200px;
+  }
+  
+  .footer-izquierda .logo {
     color: #fff;
     font-size: 22px;
     margin-bottom: 10px;
-}
-
-.footer-text {
+  }
+  
+  .footer-text {
     color: #bbb;
     font-size: 14px;
     max-width: 300px;
-}
-
-.footer-derecha {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-derecha {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 10px; 
+    gap: 30px;
     flex: 2;
-}
-
-.footer-palabra {
-    min-width: 152px; 
-}
-
-.footer-palabra h5 {
+    min-width: 300px;
+  }
+  
+  .footer-palabra h5 {
     color: #fff;
     font-size: 16px;
     margin-bottom: 10px;
-}
-
-.footer-palabra ul {
+  }
+  
+  .footer-palabra ul {
     list-style: none;
     padding: 0;
-}
-
-.footer-palabra ul li {
+  }
+  
+  .footer-palabra ul li {
     margin-bottom: 8px;
-}
-
-.footer-palabra ul li a {
+  }
+  
+  .footer-palabra ul li a {
     text-decoration: none;
     color: #bbb;
     font-size: 14px;
     transition: color 0.3s ease-in-out;
-}
-
-.footer-palabra ul li a:hover {
+  }
+  
+  .footer-palabra ul li a:hover {
     color: #fff;
-}
-
-.footer-divider {
-    width: 100%;
+  }
+  
+  .footer-divider {
+    width: 96%;
     height: 1px;
     background-color: #444;
-    margin: 30px 0;
-}
-
-.footer-bottom {
+    margin: 30px auto;
+  }
+  
+  .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 0 30px;
+    /* Padding lateral si deseas */
+    box-sizing: border-box;
     font-size: 14px;
     color: #bbb;
-}
-
-.footer-bottom .copyright {
-    text-align: left;
-}
-
-.footer-bottom .footer-links {
+  }
+  
+  .footer-bottom .footer-links {
     display: flex;
     gap: 40px;
-}
-
-.footer-bottom .footer-links a {
+  }
+  
+  .footer-bottom .footer-links a {
     color: #bbb;
     text-decoration: none;
     transition: color 0.3s;
-}
-
-.footer-bottom .footer-links a:hover {
+  }
+  
+  .footer-bottom .footer-links a:hover {
     color: #fff;
-}
+  }
