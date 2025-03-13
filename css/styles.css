@@ -397,114 +397,46 @@ nav {
     margin-bottom: 20px; 
 }
 
+/* ==========================
+     FEATURES SECTION
+  ========================== */
 
-
-
-.button5 {
-    background: #E9DBF9;
-    color: #7A40C9;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    margin-bottom: 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.button5:hover {
-    background: rgba(0, 123, 255, 0.2) !important;
-}
-
-.card-text {
-    text-align: left;
-    color: black;
-}
-
-.p6 {
-    text-align: left;
-    color: black;
-}
-
-.p7 {
-    text-align: left;
-    color: #666;
-}
-
-.h25 {
-    font-size: 3.3rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.palabra5 {
-    font-size: 1.25rem;
-    color: #666;
-    text-align: center;
-}
-
-.titulo-2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-}
-.parrafo {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-.list-item {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
-}
-.list-item i {
-    color: #6a0dad;
-    font-size: 18px;
-    margin-right: 9px;
-}
-
-
-.header2 {
-    background-color: #F7F7F7;
+  .header2 {
+    background-color: #f7f7f7;
     padding: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     width: 85%;
     margin: 0 auto;
-}
-
-.h25 {
-    color: black;
-    margin: 0;
-    text-align: center;
-}
-
-.how-it-works {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center;
-}
-
-.subtitle {
+    border-radius: 10px;
+  }
+  
+  .button5 {
+    background: #e9dbf9;
+    color: #7a40c9;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 1rem;
+  }
+  
+  .button5:hover {
+    background: rgba(0, 123, 255, 0.2);
+  }
+  
+  .subtitle {
     color: black;
     margin: 10px 0;
-}
-
-.button6 {
-    background: #620FCA;
+    max-width: 700px;
+  }
+  
+  .button6 {
+    background: #620fca;
     color: #fff;
     border: none;
     padding: 14px 22px;
@@ -513,7 +445,64 @@ nav {
     cursor: pointer;
     transition: background 0.3s;
     margin: 10px 0;
-}
+  }
+  
+  .button6:hover {
+    background: #490a9a;
+  }
+
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .features-section {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    cursor: grab;
+    flex-wrap: nowrap;
+  }
+  
+  .features-section::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+  
+  .features-section.dragging {
+    cursor: grabbing;
+  }
+  
+  .feature {
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+  
+  .feature:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: #f8f9fa;
+  }
 
 /* ==========================
      SECCIÓN FAQ
