@@ -717,310 +717,260 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   background: #f8f9fa;
 }
+/********** FAQ **********/
+/* Contenedor FAQ unificado */
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 85%;
+  margin-left: 0;
+}
 
-/* ==========================
-     SECCIÓN FAQ
-  ========================== */
-  .parent-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 85%;
-    margin-left: 0;
-  }
-  
-  .button7 {
-    background: #e9dbf9;
-    color: #7a40c9;
-    border: none;
-    padding: 9px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-weight: 600;
-  }
-  
-  .button7:hover {
-    background: rgba(0, 123, 255, 0.2);
-  }
-  
-  .h26 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: black;
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .my-5 {
-    margin: 5rem 0;
-  }
-  
-  .parent-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 85%;
-  }
-  
-  .button7 {
-    background: #e9dbf9;
-    color: #7a40c9;
-    border: none;
-    padding: 9px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-weight: 600;
-  }
-  
-  .button7:hover {
-    background: rgba(0, 123, 255, 0.2);
-  }
-  
-  .h26 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .palabra4 {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
-  }
-  
-  /* Contact Box: Imagen a la izquierda y texto a la derecha */
-  .contact-box {
-    background: #f4f4f4;
-    border-radius: 10px;
-    margin-top: 20px;
-    max-width: 600px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .contact-box img {
-    max-width: 100px;
-    margin-right: 20px;
-  }
-  
-  .contact-text {
-    text-align: left;
-  }
-  
-  .contact-button {
-    background: linear-gradient(to right, #a855f7, #9333ea);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  /* FAQ Items */
-  .faq-item {
-    background: #fff;
-    border-radius: 30px;
-    padding: 17px;
-    margin: 14px 0;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .faq-question {
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16.5px;
-  }
-  
-  .faq-question i {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 18px;
-    color: #000;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .faq-answer {
-    font-size: 13px;
-    display: none;
-    margin-top: 10px;
-  }
-  
+/* Botón 7 unificado */
+.button7 {
+  background: #e9dbf9;
+  color: #7a40c9;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 600;
+}
+
+.button7:hover {
+  background: rgba(0, 123, 255, 0.2);
+}
+
+/* Título H26 unificado */
+.h26 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+/* Contact Box */
+.contact-box {
+  background: #f4f4f4;
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-box img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.contact-text {
+  text-align: left;
+}
+
+.contact-button {
+  background: linear-gradient(to right, #a855f7, #9333ea);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* FAQ Items */
+.faq-item {
+  background: #fff;
+  border-radius: 30px;
+  padding: 17px;
+  margin: 14px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16.5px;
+}
+
+.faq-question i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.faq-answer {
+  font-size: 13px;
+  display: none;
+  margin-top: 10px;
+}
+
 /* ==========================
      SECCIÓN TESTIMONIAL
   ========================== */
-.faq-answer {
-    font-size: 13px;
-    display: none;
-    margin-top: 10px;
-}
 .how-it-works {
-    text-align: center;
-    padding: 40px 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .button5 {
-    background: #e9dbf9;
-    color: #7a40c9;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-bottom: 1rem;
-  }
-  
-  .button5:hover {
-    background: rgba(0, 123, 255, 0.2);
-  }
-  
-  .h25 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #000;
-    padding: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  .palabra5 {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 700px;
-    margin: 0.5rem auto 1.5rem;
-  }
-  
-  /* Carrusel */
-  .carousel-container {
-    padding: 20px;
-    position: relative;
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-  
-  .cards-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card {
-    flex: 0 0 250px;
-    margin-right: 20px;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .card-img-top,
-  .imagenPersona {
-    width: 50px;
-    height: 50px;
-    display: block;
-  }
-  
-  .imagenPersona {
-    padding: 3px;
-    border-radius: 20%;
-  }
-  
-  .card-body {
-    padding: 15px;
-  }
-  
-  .card-text {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 0.8rem;
-    text-align: left;
-  }
-  
-  .p6 {
-    font-weight: 600;
-    margin-bottom: 0.2rem;
-    text-align: left;
-  }
-  
-  .p7 {
-    font-size: 0.85rem;
-    color: #999;
-    text-align: left;
-  }
-  
-  /* Navegación del carrusel */
-  .navigation-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 10px;
-    gap: 20px;
-  }
-  
-  .navigation-container::before,
-  .navigation-container::after {
-    content: "";
-    height: 2px;
-    background-color: #ddd;
-    width: 20%;
-  }
-  
-  .navigation-arrows {
-    display: inline-flex;
-    gap: 10px;
-    padding: 5px;
-    border-radius: 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    background: #fff;
-  }
-  
-  .nav-button {
-    background-color: #e2e2e2;
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-button:hover {
-    background-color: #808080;
-  }
-  
-  .nav-button i {
-    color: #000;
-    font-size: 20px;
-  }
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button5 {
+  background: #e9dbf9;
+  color: #7a40c9;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 1rem;
+}
+
+.button5:hover {
+  background: rgba(0, 123, 255, 0.2);
+}
+
+.h25 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  padding: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.palabra5 {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0.5rem auto 1.5rem;
+}
+
+/* Carrusel */
+.carousel-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cards-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  flex: 0 0 250px;
+  margin-right: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-img-top,
+.imagenPersona {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.imagenPersona {
+  padding: 3px;
+  border-radius: 20%;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.p6 {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+
+.p7 {
+  font-size: 0.85rem;
+  color: #999;
+  text-align: left;
+}
+
+/* Navegación del carrusel */
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.navigation-arrows {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.nav-button {
+  background-color: #e2e2e2;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #808080;
+}
+
+.nav-button i {
+  color: #000;
+  font-size: 20px;
+}
+
 
   /* SIGIENTE PARTE */
 .color5 {
