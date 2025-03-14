@@ -50,110 +50,147 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
+  const featureSections = document.querySelectorAll('.features-section');
+  featureSections.forEach((slider) => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
   
-
-const slider = document.querySelector('.features-section');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-// Eventos del mouse
-slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('dragging');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3;
-    slider.scrollLeft = scrollLeft - walk;
-});
-
-slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('dragging');
-});
-
-slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('dragging');
-});
-
-// Eventos táctiles
-slider.addEventListener('touchstart', (e) => {
-    isDown = true;
-    slider.classList.add('dragging');
-    startX = e.touches[0].pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('touchmove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3;
-    slider.scrollLeft = scrollLeft - walk;
-});
-
-slider.addEventListener('touchend', () => {
-    isDown = false;
-    slider.classList.remove('dragging');
-});
-
-
-
-
-$(document).ready(function() {
-    $('.faq-question').click(function() {
-        $(this).next('.faq-answer').slideToggle();
-
-        // Alternar los iconos entre "+" y "-"
-        var icon = $(this).find('i');
-        if (icon.hasClass('fa-plus')) {
-            icon.removeClass('fa-plus').addClass('fa-minus');
-        } else {
-            icon.removeClass('fa-minus').addClass('fa-plus');
-        }
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('dragging');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
     });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
+  
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('dragging');
+    });
+  
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('dragging');
+    });
+  
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 3;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  
+    // Eventos táctiles
+    slider.addEventListener('touchstart', (e) => {
+      isDown = true;
+      slider.classList.add('dragging');
+      startX = e.touches[0].pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+  
+    slider.addEventListener('touchend', () => {
+      isDown = false;
+      slider.classList.remove('dragging');
+    });
+  
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.touches[0].pageX - slider.offsetLeft;
+      const walk = (x - startX) * 3;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  });
+  
+  /********** LÓGICA PARA MOSTRAR/OCULTAR RESPUESTAS FAQ **********/
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = question.querySelector('i');
+  
+    question.addEventListener('click', () => {
+      // Alterna el display de la respuesta
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-plus');
+      } else {
+        answer.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', function () {
     const wrapper = document.querySelector('.cards-wrapper');
     const prevButton = document.querySelector('.prev-button');
     const nextButton = document.querySelector('.next-button');
-
+  
     const cards = wrapper.querySelectorAll('.card');
-    const cardWidth = cards[0].offsetWidth + 20; // Incluye margen derecho
-    const visibleCards = 3; // Número de tarjetas visibles
+    const cardWidth = cards[0].offsetWidth + 20; 
+    const visibleCards = 3; 
     const totalCards = cards.length;
-
+  
     let currentPosition = 0;
+ 
     let maxPosition = -(cardWidth * (totalCards - visibleCards));
-
-    // Ajustar dinámicamente el ancho del contenedor
+  
     wrapper.style.width = `${totalCards * cardWidth}px`;
-
+  
     function updatePosition() {
-        wrapper.style.transform = `translateX(${currentPosition}px)`;
+      wrapper.style.transform = `translateX(${currentPosition}px)`;
     }
-
+  
     prevButton.addEventListener('click', () => {
-        if (currentPosition < 0) {
-            currentPosition += cardWidth;
-            updatePosition();
-        }
+      if (currentPosition < 0) {
+        currentPosition += cardWidth;
+        updatePosition();
+      }
     });
-
+  
     nextButton.addEventListener('click', () => {
-        if (currentPosition > maxPosition) {
-            currentPosition -= cardWidth;
-            updatePosition();
-        }
+      if (currentPosition > maxPosition) {
+        currentPosition -= cardWidth;
+        updatePosition();
+      }
     });
-});
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const langToggle = document.getElementById("language-toggle");
+    let lang = localStorage.getItem("language") || "es";
+  
+    function switchLanguage(applyOnly = false) {
+      if (!applyOnly) {
+        lang = lang === "es" ? "en" : "es";
+        localStorage.setItem("language", lang);
+      }
+  
+      document.querySelectorAll("[data-lang-es]").forEach(el => {
+        if (el.innerHTML.includes("<br>") || el.innerHTML.includes("<span")) {
+          el.innerHTML = lang === "es" ? el.dataset.langEs : el.dataset.langEn;
+        } else {
+          el.childNodes.forEach(node => {
+            if (node.nodeType === 3 && node.nodeValue.trim() !== "") {
+              node.nodeValue = lang === "es" ? el.dataset.langEs + " " : el.dataset.langEn + " ";
+            }
+          });
+        }
+      });
+  
+      const langToggleText = langToggle.querySelector("a").childNodes[0];
+      if (langToggleText.nodeType === 3) {
+        langToggleText.nodeValue = lang === "es" ? "Inglés" : "Español";
+      }
+    }
+  
+    langToggle.addEventListener("click", function (event) {
+      event.preventDefault();
+      switchLanguage();
+    });
+  
+    switchLanguage(true); 
+  });  
