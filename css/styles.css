@@ -462,60 +462,64 @@ nav {
 
 }
 
-/* Termino de 2 heders */
-
-
-/* Termino de 3 heders */
-.section3 {
-    padding: 7rem 1rem;
-    background: #F7F7F7;
-}
-
+/* Sección de logos y testimonios */
 .trust-section {
-    margin: 0 auto;
-    text-align: center;
+  padding: 6rem 1rem;
+  text-align: center;
+  background: #f7f7f7;
+  position: relative;
+  z-index: 2;
 }
 
 .trust-section h2 {
-    font-size: 4.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 4rem;
-    line-height: 1.2;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.2;
 }
 
 .trusted-logos {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    row-gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logos {
+  max-height: 30px;
+  object-fit: contain;
 }
 
 .trusted-logos span {
-    color: #A1A1A1;
-    font-size: 1.25rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s ease;
+  color: #a1a1a1;
+  font-size: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 1rem 0;
+  transition: background 0.3s ease;
 }
 
-.trusted-logos span:hover {
-    opacity: 1;
+/* Estilos Responsive para móviles */
+@media (max-width: 767px) {
+  [data-aos] {
+    animation: none !important;
+    /* Desactiva animaciones en móviles */
+    opacity: 1 !important;
+    /* Asegura que sea visible */
+    transform: none !important;
+  }
+
+  .trusted-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.why-matur {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    position: relative;
-}
 
 .button4 {
     background: #E9DBF9;
