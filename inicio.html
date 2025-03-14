@@ -16,58 +16,66 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- MENU -->
-    <header class="color1">
-        <nav>
-            <div class="logo" id="logo">
-                <a href="#">Matur.io</a>
-                <button class="btn-menu" id="btn-menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-            <div class="nav-container">
-                <ul class="menu" id="menu">
-                    <button class="close-menu" id="close-menu">x</button>
-                    <li><a href="#" class="dropdown">Product<i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Opción 1</a></li>
-                            <li><a href="#">Opción 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="dropdown">Service<i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Opción 1</a></li>
-                            <li><a href="#">Opción 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="dropdown">Customers<i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Opción 1</a></li>
-                            <li><a href="#">Opción 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="dropdown">Resources<i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Opción 1</a></li>
-                            <li><a href="#">Opción 2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="dropdown">Why Free<i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Opción 1</a></li>
-                            <li><a href="#">Opción 2</a></li>
-                            <li><a href="#">Opción 3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="buttons">
-                    <a href="#" class="Login">Login</a>
-                    <a href="#" class="Sign">Sign Up Free</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-<!-- MENU --> 
+  <header>
+    <nav>
+      <div class="logo" data-aos="flip-left">
+        <a href="#"><img class="LogoM" src="img/Logo.png" alt=""> Matur.io</a>
+        <button class="btn-menu" id="btn-menu" data-aos="zoom-in">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div class="nav-container" id="nav-container">
+        <button class="close-menu" id="close-menu">x</button>
+        <ul class="menu" id="menu-list">
+          <li><a href="#" class="dropdown" data-lang-es="Mensaje" data-lang-en="Message">Mensaje <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="#" data-lang-es="Opción 1" data-lang-en="Option 1">Opción 1</a></li>
+              <li><a href="#" data-lang-es="Opción 2" data-lang-en="Option 2">Opción 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="dropdown" data-lang-es="Soporte" data-lang-en="Support">Soporte <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="#" data-lang-es="Opción 1" data-lang-en="Option 1">Opción 1</a></li>
+              <li><a href="#" data-lang-es="Opción 2" data-lang-en="Option 2">Opción 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="dropdown" data-lang-es="Clientela" data-lang-en="Clientele">Clientela <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="#" data-lang-es="Opción 1" data-lang-en="Option 1">Opción 1</a></li>
+              <li><a href="#" data-lang-es="Opción 2" data-lang-en="Option 2">Opción 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="dropdown" data-lang-es="Recursos" data-lang-en="Resources">Recursos! <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="#" data-lang-es="Opción 1" data-lang-en="Option 1">Opción 1</a></li>
+              <li><a href="#" data-lang-es="Opción 2" data-lang-en="Option 2">Opción 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="dropdown" data-lang-es="¿Sin paga?" data-lang-en="Free of charge?">¿Sin paga? <i
+                class="fa-solid fa-chevron-down"></i></a>
+            <ul class="submenu">
+              <li><a href="#" data-lang-es="Opción 1" data-lang-en="Option 1">Opción 1</a></li>
+              <li><a href="#" data-lang-es="Opción 2" data-lang-en="Option 2">Opción 2</a></li>
+              <li><a href="#" data-lang-es="Opción 3" data-lang-en="Option 3">Opción 3</a></li>
+            </ul>
+          </li>
+          <li id="language-toggle">
+            <a href="#" class="lang-toggle" data-lang-es="Inglés" data-lang-en="English">Inglés</a>
+          </li>
+        </ul>
+        <div class="buttons">
+          <a href="#" class="Login" data-lang-es="Acceso" data-lang-en="Login">Acceso</a>
+          <a href="#" class="Sign" data-lang-es="Regístrate gratis" data-lang-en="Sign up for free">Regístrate
+            gratis</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
 <!-- Nuevo fondo --> 
 <header class="color12">
     <div class="section2">
