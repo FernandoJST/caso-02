@@ -1060,15 +1060,22 @@ nav {
      SECCIÓN CTA (color5)
   ========================== */
   .color5 {
-    position: relative;
-    background: linear-gradient(to top, rgba(30, 0, 40, 1) 30%, rgba(100, 0, 120, 0.9) 100%),
-      radial-gradient(circle at bottom center,
-        rgba(192, 57, 90, 0.85) 0%,
-        rgba(100, 0, 120, 0.7) 40%,
-        rgba(30, 0, 40, 1) 100%);
+    background: 
+    radial-gradient(
+      circle at bottom center,
+      rgba(15, 16, 21, 0) 10%,  
+      rgba(15, 16, 21, 1) 60%
+    ),
+    linear-gradient(
+      to right,
+      #813371,  
+      #77305E,  
+      #943946 
+    );
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+    background-size: cover, 100% 100%, cover;
+    background-position: center bottom, center bottom, center;
+    overflow: hidden;
     max-width: 100%;
     min-height: 500px;
     display: flex;
@@ -1076,115 +1083,207 @@ nav {
     justify-content: center;
     position: relative;
     padding: 60px 20px;
-  }
-  
-  /* Contenedor principal */
-  .div3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    position: relative;
-  }
-  
-  /* Contenedor del contenido central */
-  .div4 {
     text-align: center;
-    max-width: 700px;
-  }
-  
-  .h27 {
-    font-size: 2.5rem;
-    font-weight: bold;
     color: white;
-    line-height: 1.3;
   }
-  
-  .button9 {
-    margin-top: 20px;
-    padding: 15px 30px;
-    font-size: 18px;
-    background: white;
-    color: black;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .button9:hover {
-    background: #f0f0f0;
-  }
-  
-  .floating-buttons {
+.color5::before,
+.color5::after {
+    content: '';
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .left-buttons {
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .right-buttons {
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .floating-button {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 20%;
-    color: white;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin: 10px 0;
-    transition: 0.3s;
-  }
-  
-  .floating-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-  
-  .palabra10 {
-    color: white;
-    margin-top: 20px;
-  }
-  
-  /* Círculos decorativos */
-  .circle-arriba {
-    position: absolute;
-    bottom: -100px;
-    left: -150px;
     width: 600px;
-    height: 600px;
+    height: 300px;
     border-radius: 50%;
-    opacity: 0.8;
-    filter: blur(60px);
-  }
-  
-  .circle-abajo {
+    mix-blend-mode: screen;
+    mask-image: conic-gradient(
+        rgba(255, 255, 255, 0.9) 10deg, 
+        transparent 45deg,
+        rgba(255, 255, 255, 0.4) 50deg, 
+        transparent 55deg,
+        rgba(255, 255, 255, 0.9) 60deg, 
+        transparent 95deg,
+        rgba(255, 255, 255, 0.5) 100deg, 
+        transparent 110deg,
+        rgba(255, 255, 255, 0.9) 120deg, 
+        transparent 150deg,
+        rgba(255, 255, 255, 0.4) 155deg, 
+        transparent 165deg,
+        rgba(255, 255, 255, 0.9) 170deg, 
+        transparent 200deg,
+        rgba(255, 255, 255, 0.4) 205deg, 
+        transparent 215deg,
+        rgba(255, 255, 255, 0.9) 220deg, 
+        transparent 250deg,
+        rgba(255, 255, 255, 0.4) 255deg, 
+        transparent 265deg,
+        rgba(255, 255, 255, 0.9) 270deg, 
+        transparent 300deg,
+        rgba(255, 255, 255, 0.4) 305deg, 
+        transparent 315deg,
+        rgba(255, 255, 255, 0.9) 320deg, 
+        transparent 360deg
+    );
+
+    -webkit-mask-image: conic-gradient(
+        rgba(255, 255, 255, 0.9) 10deg, 
+        transparent 45deg,
+        rgba(255, 255, 255, 0.4) 50deg, 
+        transparent 55deg,
+        rgba(255, 255, 255, 0.9) 60deg, 
+        transparent 95deg,
+        rgba(255, 255, 255, 0.5) 100deg, 
+        transparent 110deg,
+        rgba(255, 255, 255, 0.9) 120deg, 
+        transparent 150deg,
+        rgba(255, 255, 255, 0.4) 155deg, 
+        transparent 165deg,
+        rgba(255, 255, 255, 0.9) 170deg, 
+        transparent 200deg,
+        rgba(255, 255, 255, 0.4) 205deg, 
+        transparent 215deg,
+        rgba(255, 255, 255, 0.9) 220deg, 
+        transparent 250deg,
+        rgba(255, 255, 255, 0.4) 255deg, 
+        transparent 265deg,
+        rgba(255, 255, 255, 0.9) 270deg, 
+        transparent 300deg,
+        rgba(255, 255, 255, 0.4) 305deg, 
+        transparent 315deg,
+        rgba(255, 255, 255, 0.9) 320deg, 
+        transparent 360deg
+    );
+}
+  /* Círculo inferior con degradado dividido en azul y rojo */
+  .color5::after {
     position: absolute;
-    bottom: -50px;
+    top: 210px;
     left: 50%;
     transform: translateX(-50%);
-    width: 750px;
-    height: 750px;
+    width: 710px;
+    height: 700px;
     border-radius: 50%;
-    opacity: 0.7;
-    filter: blur(80px);
+    border: 1px solid #fff;
+    z-index: -1;
+}
+
+  /* Círculo superior */
+  .color5::before {
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 710px;
+    height: 700px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    z-index: -1;
   }
   
+
+/* Contenedor principal */
+.div3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+/* Contenedor del contenido central */
+.div4 {
+  text-align: center;
+  max-width: 700px;
+}
+
+.h27 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1.3;
+}
+
+.button9 {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  background: white;
+  color: black;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button9:hover {
+  background: #f0f0f0;
+}
+
+.floating-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Contenedor de la izquierda */
+.left-buttons {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Contenedor de la derecha */
+.right-buttons {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.floating-button {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 20%;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;  
+}
+
+.globe-btn, .android-btn {
+  top: -50px; 
+}
+
+.apple-btn, .windows-btn {
+  top: 50px; 
+}
+.apple-btn {
+  left: 60px; 
+}
+
+.windows-btn {
+  right: 60px; 
+}
+
+@media (max-width: 891px) { 
+  .floating-buttons {
+    display: none; 
+  }
+}
+
+.floating-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.palabra10 {
+  color: white;
+  margin-top: 20px;
+}
   /*---------------------------- */
   /* FOOTER - Full Width */
   /*---------------------------- */
