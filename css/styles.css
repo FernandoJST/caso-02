@@ -731,14 +731,14 @@ nav {
 .features-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .features-section {
   display: flex;
-  gap: 10px;
+  gap: 1px;
   overflow-x: auto;
-  padding: 5px;
+  padding: 2px;
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
@@ -767,6 +767,14 @@ nav {
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+}
+
+.feature.odd {
+  background: white;
+}
+
+.feature.even {
+  background: #f0f0f0; 
 }
 
 .feature:hover {
