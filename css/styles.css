@@ -1297,10 +1297,26 @@ nav {
   
   .containerf {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
+    position: relative;
+  }
+  
+  .logoF {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    gap: 5px; 
+    position: absolute;
+    left: 0;
+  }
+  
+  .Logo_Footer {
+    width: 30px;
+    height: auto;
+    margin: 0;
+    padding: 0;
   }
   
   .footer-izquierda {
