@@ -1,36 +1,58 @@
-# Centro de Soporte de Chat
+# Centro de Soporte de Chat  
 
-Este proyecto consiste en una landing page responsiva e interactiva basada en una imagen de referencia proporcionada. La página incluye múltiples características dinámicas como un menú interactivo, un carrusel deslizante, una sección de preguntas frecuentes (FAQ) y un sistema de cambio de idioma (Español/Inglés).
+🔗 [Visita la página en GitHub Pages](https://fernandojst.github.io/caso-02/)  
+
+Este proyecto es una landing page interactiva y responsiva basada en una imagen de referencia proporcionada. La página incluye múltiples funcionalidades dinámicas para mejorar la experiencia del usuario.
+
+## Tecnologías Utilizadas
+
+- **HTML5**: Estructura semántica del sitio.
+- **CSS**: Diseño responsivo y estilización avanzada.
+- **JavaScript**: Interactividad y manipulación del DOM.
+- **AOS (Animate on Scroll)**: Efectos de animación al hacer scroll.
+- **LocalStorage**: Persistencia de configuración de idioma.
+
+## Características Principales
+
+- **Menú interactivo** con apertura y cierre en dispositivos móviles.
+- **Carrusel de tarjetas** con desplazamiento fluido y soporte táctil.
+- **Sección de preguntas frecuentes (FAQ)** con efectos de acordeón.
+- **Cambio de idioma dinámico** (Español/Inglés) con persistencia de selección.
+- **Diseño responsivo** optimizado para distintos dispositivos.
 
 ## Imagen de Referencia
 
-![original-326d614aa4fef91444e18a51f423fea0-_1_](https://github.com/user-attachments/assets/51e45c1f-6fa6-4172-aac2-7d982682a6b3)
+![original-326d614aa4fef91444e18a51f423fea0-_1_](https://github.com/user-attachments/assets/acd2bad3-edc7-47ed-b7a9-c58ef2c07d2d)
 
-## Desafíos del Proyecto
+## Desafíos y Soluciones
 
-Durante el desarrollo de la landing page, se presentaron varios retos técnicos:
+### 1️⃣ Menú interactivo en dispositivos móviles
+- **Desafío:** Implementar un menú que pueda abrirse y cerrarse fluidamente en pantallas pequeñas.
+- **Solución:** Se utilizó JavaScript para manejar eventos `click`, añadiendo y eliminando clases CSS para controlar la visibilidad del menú.
 
-### Menú interactivo:
+### 2️⃣ Carrusel de tarjetas con navegación táctil
+- **Desafío:** Implementar un carrusel horizontal con botones de navegación y soporte para gestos táctiles.
+- **Solución:** Se empleó `transform: translateX` para desplazar las tarjetas y se añadieron `touchstart` y `touchmove` para detectar gestos en dispositivos móviles.
 
-- Desafío: Implementar un menú móvil con apertura y cierre.
+### 3️⃣ Cambio de idioma dinámico
+- **Desafío:** Permitir a los usuarios alternar entre Español e Inglés con persistencia de selección.
+- **Solución:** Se implementó `localStorage` para almacenar el idioma elegido, y al cargar la página, se actualiza automáticamente el contenido en el idioma guardado.
 
-- Solución: Se utilizó JavaScript para controlar los eventos de apertura y cierre del menú.
+## 📂 Estructura del Proyecto
 
-### Carrusel de tarjetas:
+```bash
+📂 Caso-02
+├── 📁 css
+│   ├── styles.css
+├── 📁 img
+├── 📁 js
+│   ├── menu.js
+├── index.html
+└── README.md
+```
 
-- Desafío: Desarrollar un carrusel horizontal con navegación por botones, optimizado para un desplazamiento fluido con soporte de interacciones táctiles.
+# Instalación y Uso
+### 1️⃣ Clonar el repositorio
+- git clone https://github.com/FernandoJST/caso-02.git
 
-- Solución: Se implementó un carrusel utilizando transform: translateX para asegurar un desplazamiento fluido. Además, se añadieron detectores de eventos táctiles para soportar gestos en dispositivos móviles.
-
-### Cambio de idioma dinámico:
-
-- Desafío: Implementar un sistema de internacionalización (i18n) que permita alternar entre Español e Inglés, con persistencia de idioma utilizando localStorage.
-
-- Solución: Se creó un sistema que almacena el idioma seleccionado en localStorage. Al cargar la página, se verifica el idioma guardado y se actualiza el contenido dinámicamente. Un botón permite alternar entre los idiomas de forma intuitiva.
-
-## Imagen del Avance Actual
-
-
-![screencapture-file-C-Users-Alexis-Desktop-Caso-02-inicio-html-2025-03-13-20_08_40](https://github.com/user-attachments/assets/8e0c144e-5455-4386-9067-f67bcb96fd55)
-
-
+**Desarrollado por [FernandoJST](https://github.com/FernandoJST)**
